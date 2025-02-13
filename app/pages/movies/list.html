@@ -22,10 +22,10 @@
           Filters
         </div>
         <div class="m-search-filter">
-          <input type="search" class="m-inputs-filter m-caveat-brush-date-filter" placeholder="Search">
+          <input type="search" class="m-inputs-filter m-caveat-brush-date-filter" placeholder="Search" id="search_input">
         </div>
         <div class="m-stars-filter">
-          <select name="" id="" class="m-inputs-filter m-caveat-brush-date-filter">
+          <select name="" class="m-inputs-filter m-caveat-brush-date-filter" id="stars_input">
             <option value="all">
               All
             </option>
@@ -46,14 +46,14 @@
             </option>
           </select>
         </div>
-        <div class="m-seen-filter">
-          <input type="checkbox" class="m-checkbox-filter" name="" id=""><div class="m-icon-medium m-3d"></div>
+        <div class="m-seen-filter m-caveat-brush-date-filter">
+          <input type="checkbox" class="m-checkbox-filter" name="" id="seen_input"><div class="m-icon-medium m-3d"></div>
         </div>
         <div class="m-date-range-filter">
-          <input type="date" class="m-caveat-brush-date-filter m-date-filter-left"> - <input class="m-caveat-brush-date-filter m-date-filter-right" type="date">
+          <input type="date" class="m-caveat-brush-date-filter m-date-filter-left" id="date_from_input"> - <input class="m-caveat-brush-date-filter m-date-filter-right" type="date" id="date_till_input">
         </div>
         <div class="m-mode-filter">
-          <select name="" id="" class="m-inputs-filter m-caveat-brush-date-filter">
+          <select name="" id="mode_input" class="m-inputs-filter m-caveat-brush-date-filter">
             <option value="all">All</option>
             <option value="tp">Teleparty 🔴</option>
             <option value="tg">Together 💑</option>
@@ -61,7 +61,7 @@
           </select>
         </div>
         <div class="m-apply-filter">
-          <button class="m-apply-button-filter m-caveat-brush-date-filter">Apply</button>
+          <button class="m-apply-button-filter m-caveat-brush-date-filter" onclick="listMovies()">Apply</button>
         </div>
       </div>
       <div class="m-table">
@@ -80,7 +80,16 @@
         <div class="m-tf"></div>
       </div>
       <div class="m-random-movie">
-
+        <div class="m-caveat-brush-list-header">
+          Select Random Movie
+        </div>
+        <div class="m-filters-random m-caveat-brush-list-item">
+          <input type="checkbox" class="m-checkbox-filter" name="" id="get_new_movie">Get New Movie
+        </div>
+        <div id="screen" class="m-screen m-caveat-brush-list-header">🎲</div>
+        <div class="m-apply-random">
+          <button class="m-apply-button-filter m-caveat-brush-date-filter" onclick="getRandomMovie()">Get Movie</button>
+        </div>
       </div>
     </div>
   </div>

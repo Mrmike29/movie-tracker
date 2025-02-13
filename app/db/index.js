@@ -11,7 +11,19 @@ const select = async (table, params, where = null) => {
         if (where) {
             rows = rows.filter(item => {
                 for (let key in where) {
-                    if (item[key] !== where[key]) {
+                    if (key === 'name' && typeof item[key] === 'string' && typeof where[key] === 'string') {
+                        if (!item[key].toLowerCase().includes(where[key].toLowerCase())) {
+                            return false;
+                        }
+                    } else if (key === "watched_date_range") {
+                        let itemDate = new Date(item.watched_date.split("/").reverse().join("-")); // Convierte "DD/MM/YYYY" a "YYYY-MM-DD"
+                        let fromDate = where[key].from ? new Date(where[key].from) : null;
+                        let toDate = where[key].to ? new Date(where[key].to) : null;
+                
+                        if ((fromDate && itemDate < fromDate) || (toDate && itemDate > toDate)) {
+                            return false;
+                        }
+                    } else if (item[key] !== where[key]) {
                         return false;
                     }
                 }

@@ -11,7 +11,7 @@
     "id": 2,
     "name": "The Longest Yard",
     "stars": 5,
-    "watched": true,
+    "watched": false,
     "watched_date": "03/01/2025",
     "mode": "tp"
   },
@@ -21,7 +21,7 @@
     "stars": 5,
     "watched": true,
     "watched_date": "05/01/2025",
-    "mode": "tp"
+    "mode": "tg"
   },
   {
     "id": 4,
