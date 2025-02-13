@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/movies/list.css">
+  <link rel="stylesheet" href="../../css/globals.css">
+</head>
+
+<body>
+  <div class="m-main-container">
+    <div class="m-header">
+      <div class="m-icon-big m-film-slate"></div>
+      <h1 class="m-caveat-brush-title">MOVIE TRACKER</h1>
+      <div class="m-icon-big m-popcorn"></div>
+    </div>
+    <div class="m-body">
+      <div class="m-filters">
+        <div class="m-header-filter m-caveat-brush-list-header">
+          Filters
+        </div>
+        <div class="m-search-filter">
+          <input type="search" class="m-inputs-filter m-caveat-brush-date-filter" placeholder="Search">
+        </div>
+        <div class="m-stars-filter">
+          <select name="" id="" class="m-inputs-filter m-caveat-brush-date-filter">
+            <option value="all">
+              All
+            </option>
+            <option value="5">
+              <div class="m-icon-tiny m-star">⭐⭐⭐⭐⭐</div>
+            </option>
+            <option value="4">
+              <div class="m-icon-tiny m-star">⭐⭐⭐⭐</div>
+            </option>
+            <option value="3">
+              <div class="m-icon-tiny m-star">⭐⭐⭐</div>
+            </option>
+            <option value="2">
+              <div class="m-icon-tiny m-star">⭐⭐</div>
+            </option>
+            <option value="1">
+              <div class="m-icon-tiny m-star">⭐</div>
+            </option>
+          </select>
+        </div>
+        <div class="m-seen-filter">
+          <input type="checkbox" class="m-checkbox-filter" name="" id=""><div class="m-icon-medium m-3d"></div>
+        </div>
+        <div class="m-date-range-filter">
+          <input type="date" class="m-caveat-brush-date-filter m-date-filter-left"> - <input class="m-caveat-brush-date-filter m-date-filter-right" type="date">
+        </div>
+        <div class="m-mode-filter">
+          <select name="" id="" class="m-inputs-filter m-caveat-brush-date-filter">
+            <option value="all">All</option>
+            <option value="tp">Teleparty 🔴</option>
+            <option value="tg">Together 💑</option>
+            <option value="cn">Cinema 🎬</option>
+          </select>
+        </div>
+        <div class="m-apply-filter">
+          <button class="m-apply-button-filter m-caveat-brush-date-filter">Apply</button>
+        </div>
+      </div>
+      <div class="m-table">
+        <div class="m-th">
+          <div class="m-caveat-brush-list-header" style="width: 30%;">Movie title</div>
+          <div style="width: 10%;">
+            <div class="m-icon-tiny m-star"></div>
+          </div>
+          <div class="m-caveat-brush-list-header" style="width: 20%;">Seen</div>
+          <div class="m-caveat-brush-list-header" style="width: 20%;">Date</div>
+          <div class="m-caveat-brush-list-header" style="width: 20%;">Mode</div>
+        </div>
+        <div class="m-tb" id="list_body">
+          
+        </div>
+        <div class="m-tf"></div>
+      </div>
+      <div class="m-random-movie">
+
+      </div>
+    </div>
+  </div>
+  <script src="../../db/index.js"></script>
+  <script src="../../js/globals.js"></script>
+  <script src="../../js/movies/list.js"></script>
+</body>
+
+</html>
