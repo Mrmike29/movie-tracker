@@ -82,6 +82,11 @@ body {
   height: 80px;
 }
 
+.m-icon-huge {
+  width: 150px;
+  height: 150px;
+}
+
 .m-film-slate {
   background-image: url("icons/png/film-slate.png");
   background-size: contain;
@@ -128,6 +133,27 @@ body {
 
 .m-together {
   background-image: url("icons/png/together.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.m-koala {
+  background-image: url("icons/png/coala.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.m-duck {
+  background-image: url("icons/png/pato.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.m-cow {
+  background-image: url("icons/png/vaca.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
