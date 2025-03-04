@@ -5,8 +5,10 @@
   "homepage": "https://Mrmike29.github.io/movie-tracker",
   "dependencies": {
     "cra-template": "1.2.0",
+    "firebase": "^11.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-firebase-hooks": "^5.1.1",
     "react-scripts": "5.0.1"
   },
   "scripts": {
@@ -36,6 +38,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "gh-pages": "^6.3.0",
+    "firebase": "^11.4.0"
   }
 }
