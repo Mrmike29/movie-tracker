@@ -64,52 +64,89 @@ function MovieList({ movies, onOpenModal, openEditModal }) {
           </div>
         ) : movies.length > 0 ? (
           movies.map((movie) => (
-            <div key={movie.id} className="m-table-item">
-              <div
-                className="m-caveat-brush-list-item"
-                style={{ width: "30%" }}
-              >
-                {movie.name}
-              </div>
-              <div style={{ width: "10%" }}>
-                {Array.from({ length: movie.stars }, (_, index) => (
-                  <div key={index} className="m-icon-tiny m-star"></div>
-                ))}
-              </div>
-              <div
-                className="m-caveat-brush-list-item"
-                style={{ width: "10%" }}
-              >
-                {movie.watched ? (
-                  <div className="m-icon-medium m-3d"></div>
-                ) : (
-                  ""
-                )}
-              </div>
-              <div
-                className="m-caveat-brush-list-item"
-                style={{ width: "20%" }}
-              >
-                {movie.watched_date}
-              </div>
-              <div
-                className="m-caveat-brush-list-item"
-                style={{ width: "20%" }}
-              >
-                {getModeElement(movie.mode)}
-              </div>
-              <div
-                className="m-caveat-brush-list-item"
-                style={{ width: "10%" }}
-              >
-                <button
-                  className="m-edit-movie-button m-caveat-brush-date-filter"
-                  onClick={() => openEditModal(movie)}
+            <>
+              <div key={movie.id} className="m-table-item">
+                <div
+                  className="m-caveat-brush-list-item"
+                  style={{ width: "30%" }}
                 >
-                  Edit
-                </button>
+                  {movie.name}
+                </div>
+                <div style={{ width: "10%" }}>
+                  {Array.from({ length: movie.stars }, (_, index) => (
+                    <div key={index} className="m-icon-tiny m-star"></div>
+                  ))}
+                </div>
+                <div
+                  className="m-caveat-brush-list-item"
+                  style={{ width: "10%" }}
+                >
+                  {movie.watched ? (
+                    <div className="m-icon-medium m-3d"></div>
+                  ) : (
+                    <div className="m-icon-medium m-ticket"></div>
+                  )}
+                </div>
+                <div
+                  className="m-caveat-brush-list-item"
+                  style={{ width: "20%" }}
+                >
+                  {movie.watched ? (
+                    movie.watched_date
+                  ) : (
+                    "Pending"
+                  )}
+                </div>
+                <div
+                  className="m-caveat-brush-list-item"
+                  style={{ width: "20%" }}
+                >
+                  {getModeElement(movie.mode)}
+                </div>
+                <div
+                  className="m-caveat-brush-list-item"
+                  style={{ width: "10%" }}
+                >
+                  <button
+                    className="m-edit-movie-button m-caveat-brush-date-filter"
+                    onClick={() => openEditModal(movie)}
+                  >
+                    Edit
+                  </button>
+                </div>
               </div>
-            </div>
+              <div key={movie.id + "-mobile"} className="m-table-item-cell" onClick={() => openEditModal(movie)}>
+                <div className="m-icon-list-cell">
+                  {movie.watched ? (
+                    <div className="m-icon-medium m-3d"></div>
+                  ) : (
+                    <div className="m-icon-medium m-ticket"></div>
+                  )}
+                </div>
+                <div className="m-name-and-stars-list-cell">
+                  <div className="m-movie-name-cell m-caveat-brush-list-item">
+                    {movie.name}
+                  </div>
+                  <div className="m-movie-stars-cell">
+                    {Array.from({ length: movie.stars }, (_, index) => (
+                      <div key={index} className="m-icon-tiny m-star"></div>
+                    ))}
+                  </div>
+                </div>
+                <div className="m-date-and-mode-list-cell">
+                  <div className="m-movie-date-cell m-caveat-brush-list-item">
+                    {movie.watched ? (
+                      movie.watched_date
+                    ) : (
+                      "Pending"
+                    )}
+                  </div>
+                  <div className="m-movie-mode-cell m-caveat-brush-list-item">
+                    {getModeElement(movie.mode)}
+                  </div>
+                </div>
+              </div>
+            </>
           ))
         ) : (
           <div

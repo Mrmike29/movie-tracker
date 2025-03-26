@@ -26,7 +26,7 @@ const firebaseConfig = {
   storageBucket: "movie-tracker030333.firebasestorage.app",
   messagingSenderId: "865442648252",
   appId: "1:865442648252:web:43f270d3f6c03a773600b9",
-  measurementId: "G-3WDM37Q4XV",
+  measurementId: "G-3WDM37Q4XV"
 };
 
 // Inicializa Firebase
@@ -116,7 +116,7 @@ function Modal({ isOpen, onClose, refreshMovies }) {
             </select>
           </div>
 
-          <div className="m-field-modal-form">
+          <div className="m-field-modal-form m-caveat-brush-date-filter">
             <input
               type="checkbox"
               name="watched"
@@ -124,7 +124,7 @@ function Modal({ isOpen, onClose, refreshMovies }) {
               onChange={handleChange}
               className="m-checkbox-filter"
             />{" "}
-            <div className="m-icon-medium m-3d"></div>
+            Seen
           </div>
 
           <div className="m-field-modal-form m-field-modal-form-input">

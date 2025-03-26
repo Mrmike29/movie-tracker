@@ -62,7 +62,7 @@ function EditMovieModal({ isOpen, onClose, movie, onSave }) {
             </select>
           </div>
 
-          <div className="m-field-modal-form">
+          <div className="m-field-modal-form m-caveat-brush-date-filter">
             <input
               type="checkbox"
               name="watched"
@@ -70,7 +70,7 @@ function EditMovieModal({ isOpen, onClose, movie, onSave }) {
               onChange={handleChange}
               className="m-checkbox-filter"
             />{" "}
-            <div className="m-icon-medium m-3d"></div>
+            Seen
           </div>
 
           <div className="m-field-modal-form m-field-modal-form-input">

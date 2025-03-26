@@ -39,7 +39,7 @@ function Filters({ setFilters }) {
           name="seen"
           className="m-checkbox-filter"
           onChange={handleChange}
-        />
+        /> Seen
       </div>
       <div className="m-date-range-filter">
         <input
