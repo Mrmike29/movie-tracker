@@ -19,7 +19,7 @@ function EditMovieModal({ isOpen, onClose, movie, onSave }) {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setMovieData((prev) => ({ ...prev, [name]: type === "checkbox" ? checked : value }));
+    setMovieData((prev) => ({ ...prev, [name]: type === "checkbox" ? (checked? "seen" : "unseen") : value }));
   };
 
   const handleSubmit = () => {
@@ -66,7 +66,7 @@ function EditMovieModal({ isOpen, onClose, movie, onSave }) {
             <input
               type="checkbox"
               name="watched"
-              checked={movieData.watched}
+              checked={movieData.watched === "seen"}
               onChange={handleChange}
               className="m-checkbox-filter"
             />{" "}
