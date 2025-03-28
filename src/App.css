@@ -212,13 +212,15 @@ body {
 .m-modal-form-container {
   width: 100%;
   height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .m-field-modal-form {
   width: 100%;
   height: 40px;
   display: flex;
-  padding: 20px 0;
   align-items: center;
   justify-content: center;
 }
@@ -294,9 +296,52 @@ body {
 }
 
 .m-seen-filter {
-  padding: 0;
-  width: 70px;
+  justify-content: space-around;
 }
+
+.m-switch {
+  width: 60px;
+  height: 5px;
+  background: #636363;
+  border-radius: 20px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.m-slider {
+  width: 34px;
+  height: 34px;
+  border: 1px solid;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+
+/* Posiciones del slider */
+.state-all .m-slider { left: 1px; background: gray; }  /* All */
+
+.state-seen .m-slider { 
+  left: 50%;
+  display: inline-block;
+  background: #2196f3;
+  background-size: contain;
+  transform: translateX(-50%);
+  background-repeat: no-repeat;
+  background-image: url("icons/png/3d.png");
+} /* Seen */
+
+.state-unseen .m-slider {  /* Unseen */
+  left: calc(100% - 35px); 
+  background: red; 
+  background-image: url("icons/png/001-boleto.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+} 
 
 .m-apply-filter {
   justify-content: space-between;
@@ -601,6 +646,7 @@ body {
   }
   .m-seen-filter {
     grid-column: 3 / 4;
+    justify-content: space-around;
   }
 
   .m-date-range-filter {
@@ -669,6 +715,7 @@ body {
   }
   .m-seen-filter {
     grid-column: 3 / 4;
+    justify-content: space-around;
   }
 
   .m-date-range-filter {
@@ -746,6 +793,7 @@ body {
   }
   .m-seen-filter {
     grid-column: 3 / 4;
+    justify-content: space-around;
   }
 
   .m-date-range-filter {

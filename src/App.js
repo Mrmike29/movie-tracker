@@ -178,9 +178,12 @@ function Modal({ isOpen, onClose, refreshMovies }) {
 
 const getMovies = async (filters) => {
   try {
-    let peliculasRef = collection(db, "movies");
-    let q = query(peliculasRef, orderBy("watched_date", "asc"));
-    let snapshot = await getDocs(q);
+    // 1. Obtener las películas desde Firestore
+    const peliculasRef = collection(db, "movies");
+    const q = query(peliculasRef, orderBy("watched_date", "asc"));
+    const snapshot = await getDocs(q);
+
+    // 2. Transformar datos
     let peliculas = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
     if (filters.search) {
@@ -193,8 +196,8 @@ const getMovies = async (filters) => {
       peliculas = peliculas.filter((p) => p.stars === Number(filters.rating));
     }
 
-    if (filters.seen) {
-      peliculas = peliculas.filter((p) => p.watched === true);
+    if (filters.seen !== "all") {
+      peliculas = peliculas.filter((p) => p.watched === filters.seen);
     }
 
     if (filters.startDate && filters.endDate) {
@@ -217,13 +220,14 @@ const getMovies = async (filters) => {
   }
 };
 
+
 function App() {
   const [movies, setMovies] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [filters, setFilters] = useState({
     search: "",
     rating: "all",
-    seen: false,
+    seen: "all",
     startDate: "",
     endDate: "",
     mode: "all",

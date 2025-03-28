@@ -81,7 +81,7 @@ function MovieList({ movies, onOpenModal, openEditModal }) {
                   className="m-caveat-brush-list-item"
                   style={{ width: "10%" }}
                 >
-                  {movie.watched ? (
+                  {movie.watched === "seen" ? (
                     <div className="m-icon-medium m-3d"></div>
                   ) : (
                     <div className="m-icon-medium m-ticket"></div>
@@ -91,7 +91,7 @@ function MovieList({ movies, onOpenModal, openEditModal }) {
                   className="m-caveat-brush-list-item"
                   style={{ width: "20%" }}
                 >
-                  {movie.watched ? (
+                  {movie.watched === "seen" ? (
                     movie.watched_date
                   ) : (
                     "Pending"
@@ -117,7 +117,7 @@ function MovieList({ movies, onOpenModal, openEditModal }) {
               </div>
               <div key={movie.id + "-mobile"} className="m-table-item-cell" onClick={() => openEditModal(movie)}>
                 <div className="m-icon-list-cell">
-                  {movie.watched ? (
+                  {movie.watched === "seen" ? (
                     <div className="m-icon-medium m-3d"></div>
                   ) : (
                     <div className="m-icon-medium m-ticket"></div>
@@ -135,7 +135,7 @@ function MovieList({ movies, onOpenModal, openEditModal }) {
                 </div>
                 <div className="m-date-and-mode-list-cell">
                   <div className="m-movie-date-cell m-caveat-brush-list-item">
-                    {movie.watched ? (
+                    {movie.watched === "seen" ? (
                       movie.watched_date
                     ) : (
                       "Pending"
