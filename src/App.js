@@ -2,6 +2,9 @@ import "./App.css";
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import Movies from "./pages/Movies";
+import Food from "./pages/Food";
+import Games from "./pages/Games";
+import Travel from "./pages/Travel";
 import Navbar from "./components/Navbar";
 
 // import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
@@ -25,23 +28,51 @@ function Header() {
   const getTitle = () => {
     switch (location.pathname) {
       case "/movie-tracker":
-        return "MOVIE TRACKER";
+        return (
+          <>
+            <div className="m-icon-big m-film-slate"></div>
+              <h1 className="m-caveat-brush-title">MOVIE TRACKER</h1>
+            <div className="m-icon-big m-popcorn"></div>
+          </>
+        )
       case "/food":
-        return "FOOD";
+        return (
+          <>
+            <div className="m-icon-big m-pizza"></div>
+              <h1 className="m-caveat-brush-title">FOOD</h1>
+            <div className="m-icon-big m-cheesecake"></div>
+          </>
+        )
       case "/games":
-        return "GAMES";
+        return (
+          <>
+            <div className="m-icon-big m-puzzle"></div>
+              <h1 className="m-caveat-brush-title">GAMES</h1>
+            <div className="m-icon-big m-console"></div>
+          </>
+        )
       case "/travel":
-        return "TRAVEL";
+        return (
+          <>
+            <div className="m-icon-big m-travel"></div>
+              <h1 className="m-caveat-brush-title">TRAVEL</h1>
+            <div className="m-icon-big m-luggage"></div>
+          </>
+        )
       default:
-        return "MOVIE TRACKER";
+        return (
+          <>
+            <div className="m-icon-big m-film-slate"></div>
+              <h1 className="m-caveat-brush-title">MOVIE TRACKER</h1>
+            <div className="m-icon-big m-popcorn"></div>
+          </>
+        )
     }
   };
 
   return (
     <header className="m-header">
-      <div className="m-icon-big m-film-slate"></div>
-      <h1 className="m-caveat-brush-title">{getTitle()}</h1>
-      <div className="m-icon-big m-popcorn"></div>
+      {getTitle()}
     </header>
   );
 }
@@ -56,6 +87,9 @@ function App() {
         <main className="m-body">
           <Routes>
             <Route path="/movie-tracker" element={<Movies />} />
+            <Route path="/food" element={<Food />} />
+            <Route path="/games" element={<Games />} />
+            <Route path="/travel" element={<Travel />} />
           </Routes>
         </main>
         

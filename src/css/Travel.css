@@ -1,0 +1,15 @@
+.m-travel {
+  background-image: url("../icons/png/travel.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(-20deg);
+}
+
+.m-luggage {
+  background-image: url("../icons/png/luggage.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(20deg);
+}

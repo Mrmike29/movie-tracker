@@ -1,0 +1,15 @@
+.m-puzzle {
+  background-image: url("../icons/png/puzzle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(-20deg);
+}
+
+.m-console {
+  background-image: url("../icons/png/console.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(20deg);
+}

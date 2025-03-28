@@ -1,0 +1,15 @@
+.m-pizza {
+  background-image: url("../icons/png/pizza.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(-20deg);
+}
+
+.m-cheesecake {
+  background-image: url("../icons/png/cheesecake.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  transform: rotate(20deg);
+}

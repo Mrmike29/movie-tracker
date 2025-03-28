@@ -29,7 +29,7 @@
 }
 
 .m-ticket {
-  background-image: url("../icons/png/001-boleto.png");
+  background-image: url("../icons/png/ticket.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
@@ -57,21 +57,14 @@
 }
 
 .m-koala {
-  background-image: url("../icons/png/coala.png");
+  background-image: url("../icons/png/koala.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
 }
 
 .m-duck {
-  background-image: url("../icons/png/pato.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  display: inline-block;
-}
-
-.m-cow {
-  background-image: url("../icons/png/vaca.png");
+  background-image: url("../icons/png/duck.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
@@ -222,7 +215,7 @@
   /* Unseen */
   left: calc(100% - 35px);
   background: red;
-  background-image: url("../icons/png/001-boleto.png");
+  background-image: url("../icons/png/ticket.png");
   background-size: contain;
   background-repeat: no-repeat;
   display: inline-block;
